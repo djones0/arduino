@@ -28,7 +28,7 @@ void setup() {
   // turn on servo
   servo1.attach(9); //attach servo1 to pin 9
   servo2.attach(10);
-  servo3.attach(28);//attach servo2 to pin 10
+  servo3.attach(28);
   servo4.attach(30);
 motor.setSpeed(20);
 

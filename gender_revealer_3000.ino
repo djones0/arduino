@@ -1,6 +1,4 @@
 #include <AFMotor.h>
-
-
 #include <Servo.h>
 
 Servo servo1;
@@ -18,21 +16,14 @@ AF_Stepper motor(400,1);
 int position = 10;
 AF_Stepper motor2(64,1);
 
-
-
-
 void setup() {
   Serial.begin(9600);           // set up Serial library at 9600 bps
   Serial.println("Gender Revealer 3000");
-
-
   servo1.attach(9); //attach servo1 to pin 9
   servo2.attach(10);
   servo3.attach(28);
   servo4.attach(30);
 motor.setSpeed(20);
-
-
   pinMode(buttonPin, INPUT_PULLUP);
   pinMode(ledPin1, OUTPUT);
   pinMode(ledPin2, OUTPUT);
@@ -40,16 +31,8 @@ motor.setSpeed(20);
   pinMode(ledPin4, OUTPUT);
   pinMode(ledPin5, OUTPUT);
   pinMode(ledPin6, OUTPUT);
-
   pinMode(26, OUTPUT);
-
-
-
-
 }
-
-
-
 
 void loop() {
    int buttonState = digitalRead(buttonPin);
@@ -58,9 +41,6 @@ void loop() {
   servo1.write(179); //move sevor1 to the outward position
   servo3.write(0);
   servo4.write(179);
-
-
-
 if (buttonState ==LOW){
   Serial.print("button press");
   delay(2000);
@@ -87,27 +67,7 @@ if (buttonState ==LOW){
   digitalWrite(ledPin5, LOW);
   digitalWrite(ledPin6, HIGH);
   delay(200);
- digitalWrite(ledPin6, LOW);
-
-   digitalWrite(ledPin1, HIGH);
-  delay(200);
-  digitalWrite(ledPin1, LOW);
-  digitalWrite(ledPin2, HIGH);
-  delay(200);
-  digitalWrite(ledPin2, LOW);
-  digitalWrite(ledPin3, HIGH);
-  delay(200);
-  digitalWrite(ledPin3, LOW);
-  digitalWrite(ledPin4, HIGH);
-  delay(200);
-  digitalWrite(ledPin4, LOW);
-  digitalWrite(ledPin5, HIGH);
-  delay(200);
-  digitalWrite(ledPin5, LOW);
-  digitalWrite(ledPin6, HIGH);
-  delay(200);
- digitalWrite(ledPin6, LOW);
-
+  digitalWrite(ledPin6, LOW);
   digitalWrite(ledPin1, HIGH);
   delay(200);
   digitalWrite(ledPin1, LOW);
@@ -125,7 +85,7 @@ if (buttonState ==LOW){
   digitalWrite(ledPin5, LOW);
   digitalWrite(ledPin6, HIGH);
   delay(200);
- digitalWrite(ledPin6, LOW);
+  digitalWrite(ledPin6, LOW);
   digitalWrite(ledPin1, HIGH);
   delay(200);
   digitalWrite(ledPin1, LOW);
@@ -143,7 +103,7 @@ if (buttonState ==LOW){
   digitalWrite(ledPin5, LOW);
   digitalWrite(ledPin6, HIGH);
   delay(200);
- digitalWrite(ledPin6, LOW);
+  digitalWrite(ledPin6, LOW);
   digitalWrite(ledPin1, HIGH);
   delay(200);
   digitalWrite(ledPin1, LOW);
@@ -161,13 +121,29 @@ if (buttonState ==LOW){
   digitalWrite(ledPin5, LOW);
   digitalWrite(ledPin6, HIGH);
   delay(200);
- digitalWrite(ledPin6, LOW);
- motor.step(400, FORWARD, DOUBLE);
+  digitalWrite(ledPin6, LOW);
+  digitalWrite(ledPin1, HIGH);
+  delay(200);
+  digitalWrite(ledPin1, LOW);
+  digitalWrite(ledPin2, HIGH);
+  delay(200);
+  digitalWrite(ledPin2, LOW);
+  digitalWrite(ledPin3, HIGH);
+  delay(200);
+  digitalWrite(ledPin3, LOW);
+  digitalWrite(ledPin4, HIGH);
+  delay(200);
+  digitalWrite(ledPin4, LOW);
+  digitalWrite(ledPin5, HIGH);
+  delay(200);
+  digitalWrite(ledPin5, LOW);
+  digitalWrite(ledPin6, HIGH);
+  delay(200);
+  digitalWrite(ledPin6, LOW);
+  motor.step(400, FORWARD, DOUBLE);
   delay(10000);//remove when adding servo5
-motor.step(400, BACKWARD, DOUBLE);
+  motor.step(400, BACKWARD, DOUBLE);
 }
-
-
 else {
   motor.step(1, FORWARD, MICROSTEP);
 delay(1000);
@@ -175,9 +151,6 @@ delay(1000);
   servo2.write(179); //move servo2 to the outward position
   servo1.write(179); //move sevor1 to the outward position
   servo3.write(0);
-
-
   digitalWrite(24,HIGH);
 }
-
 }

@@ -25,7 +25,7 @@ void setup() {
   Serial.begin(9600);           // set up Serial library at 9600 bps
   Serial.println("Gender Revealer 3000");
 
-  // turn on servo
+
   servo1.attach(9); //attach servo1 to pin 9
   servo2.attach(10);
   servo3.attach(28);

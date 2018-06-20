@@ -8,7 +8,6 @@ const int buttonPin= 11;    //set constant input for buttonPin to 11
 
 
 void setup() {
-  // put your setup code here, to run once:
 Serial.begin(9600);   //begin serial read
 Serial.println("Switch test");    //begin display output
 servo1.attach(9);   //attach servo1 to pin 9
@@ -17,11 +16,9 @@ pinMode(10, OUTPUT);
 }
 
 void loop() {
-
   int buttonState = digitalRead(buttonPin);   //get initial state of button upon start up
   Serial.println(buttonState);    //display the buttonstate
   servo1.write(-10);    //move servo1 to home position
-
 
 if (buttonState ==LOW){
     Serial.print("Button press");

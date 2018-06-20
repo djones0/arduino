@@ -23,7 +23,7 @@ void setup() {
   servo2.attach(10);
   servo3.attach(28);
   servo4.attach(30);
-motor.setSpeed(20);
+  motor.setSpeed(20);
   pinMode(buttonPin, INPUT_PULLUP);
   pinMode(ledPin1, OUTPUT);
   pinMode(ledPin2, OUTPUT);

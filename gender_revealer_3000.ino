@@ -50,7 +50,7 @@ if (buttonState ==LOW){
   delay(2000);
   servo3.write(89);
   delay(300);
-  digitalWrite(ledPin1, HIGH);
+  digitalWrite(ledPin1, HIGH);  //this series of flashing LED's could likely be reduced to repeating
   delay(200);
   digitalWrite(ledPin1, LOW);
   digitalWrite(ledPin2, HIGH);
